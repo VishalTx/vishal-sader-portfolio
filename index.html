@@ -1,111 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vishal Sader · DevOps Engineer</title>
-
-  <!-- Font Awesome -->
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-        integrity="sha512-sF7q11..." crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <!-- colour-scheme toggle -->
-  <button id="themeToggle" aria-label="Toggle dark mode">
-    <i class="fa-solid fa-moon"></i>
-  </button>
-
-  <!-- HERO -->
-  <header class="hero container reveal">
-    <img src="https://avatars.githubusercontent.com/u/1?v=4" alt="Avatar" class="avatar">
-    <h1>Vishal Sader</h1>
-    <p class="subtitle">DevOps Engineer · CI/CD · Cloud Automation</p>
-    <nav>
-      <a href="#about">About</a><a href="#skills">Skills</a>
-      <a href="#experience">Experience</a><a href="#education">Education</a>
-      <a href="#awards">Awards</a><a href="#contact">Contact</a>
-    </nav>
-  </header>
-
-  <!-- sections populated by JS -->
-  <main id="content">
-    <section id="about"      class="container reveal"></section>
-    <section id="skills"     class="container reveal"></section>
-    <section id="experience" class="container reveal"></section>
-    <section id="education"  class="container reveal"></section>
-    <section id="awards"     class="container reveal"></section>
-    <section id="contact"    class="container reveal"></section>
-  </main>
-
-  <footer class="container">© <span id="year"></span> Vishal Sader</footer>
-
-  <!-- ---------- EMBEDDED DATA ------------ -->
-  <script id="resumeData" type="application/json">
-  {
-    "profile":{
-      "summary":"DevOps Engineer with 3.5+ years building CI/CD pipelines, orchestrating cloud infrastructure and automating Kubernetes workloads."
-    },
-    "skills":[
-      "Bash","Shell","Python",
-      "AWS","Azure","GCP",
-      "Jenkins","Harness","ArgoCD","CircleCI",
-      "Kubernetes","Docker","Terraform","Ansible",
-      "Nexus","ECR","JFrog Artifactory",
-      "New Relic","Prometheus","Grafana"
-    ],
-    "experience":[
-      {
-        "title":"DevOps Engineer",
-        "company":"Deluxe D3 · TestingXperts Ltd",
-        "period":"May 2025 – Present",
-        "responsibilities":[
-          "Built Harness pipelines that automate data-validation workflows",
-          "Integrated QuerySurge triggers and real-time Slack alerting",
-          "Managed S3 artifacts and synthetic data via GenRocket"
-        ]
-      },
-      {
-        "title":"DevOps Consultant",
-        "company":"Deluxe Digital Payment Portal · TestingXperts Ltd",
-        "period":"Dec 2024 – Apr 2025",
-        "responsibilities":[
-          "Created build pipelines for Angular & .NET in JFrog Artifactory",
-          "Implemented zero-downtime IIS releases through Harness CD"
-        ]
-      },
-      {
-        "title":"Automation Engineer",
-        "company":"ASTM · TestingXperts Ltd",
-        "period":"Jan 2022 – Nov 2023",
-        "responsibilities":[
-          "Containerised Flask app; deployed to EKS via Jenkins + ArgoCD",
-          "Configured HPA & New Relic dashboards for performance insights"
-        ]
-      }
-    ],
-    "education":{
-      "degree":"B.Tech Computer Science",
-      "institution":"Rayat Bahra University, Mohali",
-      "period":"2018 – 2022",
-      "cgpa":"7.8/10"
-    },
-    "awards":[
-      "Harness Star-Level Certification",
-      "Google Cloud badges – Compute Engine, Looker Studio, Cloud Run"
-    ],
-    "contact":{
-      "location":"Chandigarh, IN",
-      "phone":"9697393198",
-      "email":"vishalsadar75@gmail.com",
-      "linkedin":"https://linkedin.com/in/vishal-sader-134554205"
+  
+  <style>
+    /* ===== CSS ===== */
+    :root {
+      --bg: #f8f9fa;
+      --card: #ffffff;
+      --text: #232527;
+      --primary: #195377;
+      --accent: #0aa2c0;
+      --radius: 8px;
+      --transition: 0.3s ease;
+      --shadow: rgba(0,0,0,0.08) 0 4px 12px;
     }
-  }
-  </script>
 
-  <!-- libs -->
-  <script src="https://unpkg.com/scrollreveal"></script>
-  <script src="main.js" defer></script>
-</body>
-</html>
+    body.dark {
+      --bg: #101417;
+      --card: #15202b;
+      --text: #e9ecef;
+      --primary: #4dabf7;
+      --accent: #71c2ff;
+      --shadow: rgba(0,0,0,0.4) 0 4px 12px;
+    }
+
+    /* ===== GLOBAL STYLES ===== */
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      transition: background var(--transition), color var(--transition);
+      line-height: 1.6;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 940px;
+      margin: 0 auto;
+      padding: 48px 20px;
+    }
+
+    h1, h2, h3 {
+      color: var(--primary);
+      margin: 0.5em 0;
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 1.6rem;
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 8px;
+      margin-bottom: 24px;
+    }
+
+    /* ===== NAVIGATION ===== */
+    nav {
+      text-align: center;
+      margin: 32px 0;
+    }
+
+    nav a {
+      margin: 0 12px;
+      text-decoration: none;
+      color: var(--accent);
+      font-weight: 600;
+      padding: 8px 16px;
+      border-radius: var(--radius);
+      transition: background var(--transition);
+    }
+
+    nav a:hover {
+      background: var(--accent);
+      color: white;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      text-align: center;
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      margin-bottom: 42px;
+    }
+
+    .avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin: 24px auto;
+      display: block;
+      border: 4px solid var(--accent);
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      color: var(--accent);
+      margin: 16px 0;
+    }
+
+    /* ===== SECTIONS ===== */
+    section {
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 32px;
+      margin-bottom: 42px;
+    }
+
+    /* ===== SKILLS ===== */
+    .skill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .skill-list li {
+      background: var(--primary);
+      color
