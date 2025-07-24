@@ -4,6 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vishal Sader | DevOps Engineer Portfolio</title>
+  <meta name="description" content="Vishal Sader - DevOps Engineer Portfolio, CI/CD, Cloud, Automation, Kubernetes, AWS, Azure, GCP, Python, Bash, Terraform, Ansible.">
+  <meta property="og:title" content="Vishal Sader | DevOps Engineer Portfolio">
+  <meta property="og:description" content="Portfolio of Vishal Sader, DevOps Engineer specializing in CI/CD, Cloud, Automation, and more.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="profile.jpg">
+  <link rel="icon" type="image/png" href="profile.jpg">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
@@ -24,6 +30,8 @@
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
       <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#testimonials">Testimonials</a>
       <a href="#education">Education</a>
       <a href="#certifications">Awards</a>
       <a href="#contact">Contact</a>
@@ -127,6 +135,57 @@
         </li>
       </ul>
     </section>
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="projects-list">
+        <div class="project-card" data-project="1">
+          <img src="https://placehold.co/300x180?text=Project+1" alt="Project 1">
+          <h3>CI/CD Automation Platform</h3>
+          <p>Automated build, test, and deploy pipelines using Jenkins, Harness, and ArgoCD.</p>
+          <button class="project-details-btn">View Details</button>
+        </div>
+        <div class="project-card" data-project="2">
+          <img src="https://placehold.co/300x180?text=Project+2" alt="Project 2">
+          <h3>Cloud Infra Provisioning</h3>
+          <p>Provisioned scalable AWS/Azure infrastructure with Terraform and Ansible.</p>
+          <button class="project-details-btn">View Details</button>
+        </div>
+        <div class="project-card" data-project="3">
+          <img src="https://placehold.co/300x180?text=Project+3" alt="Project 3">
+          <h3>Kubernetes Monitoring Suite</h3>
+          <p>Deployed Prometheus, Grafana, and New Relic for real-time monitoring.</p>
+          <button class="project-details-btn">View Details</button>
+        </div>
+      </div>
+      <!-- Modal for project details -->
+      <div class="modal" id="projectModal">
+        <div class="modal-content">
+          <span class="close-modal">&times;</span>
+          <div id="modalDetails"></div>
+        </div>
+      </div>
+    </section>
+    <section id="testimonials">
+      <h2>Testimonials</h2>
+      <div class="testimonial-carousel">
+        <div class="testimonial active">
+          <p>"Vishal's automation skills streamlined our entire deployment process!"</p>
+          <span>- Team Lead, TestingXperts</span>
+        </div>
+        <div class="testimonial">
+          <p>"A true DevOps professional with deep cloud expertise."</p>
+          <span>- Project Manager, Deluxe D3</span>
+        </div>
+        <div class="testimonial">
+          <p>"Always delivers reliable, scalable solutions on time."</p>
+          <span>- Senior Engineer, ASTM</span>
+        </div>
+      </div>
+      <div class="testimonial-controls">
+        <button class="testimonial-prev">&#8592;</button>
+        <button class="testimonial-next">&#8594;</button>
+      </div>
+    </section>
     <section id="education">
       <h2>Education</h2>
       <ul class="education-list">
@@ -155,6 +214,13 @@
       </form>
     </section>
   </main>
+  <button id="backToTop" title="Back to top">&#8679;</button>
+  <div id="splashScreen">
+    <div class="splash-content">
+      <img src="profile.jpg" alt="Loading..." style="width:60px;height:60px;border-radius:50%;margin-bottom:10px;">
+      <div class="splash-text">Loading Portfolio...</div>
+    </div>
+  </div>
   <script src="script.js"></script>
   <!-- Place your profile.jpg image in the root of your repository for GitHub Pages -->
 </body>
