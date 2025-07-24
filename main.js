@@ -1,5 +1,5 @@
 /* ---------- CONSTANTS ---------- */
-const DATA_URL = 'resume.json';
+const DATA_URL = './resume.json';
 const yearSpan = document.getElementById('year');
 
 /* ---------- THEME ---------- */
