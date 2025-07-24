@@ -259,6 +259,191 @@ header img {
   margin-top: 6px;
 }
 
+/* --- Projects Section --- */
+.projects-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+.project-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(25,83,119,0.07);
+  width: 300px;
+  padding: 0 0 18px 0;
+  text-align: center;
+  transition: transform 0.18s, box-shadow 0.18s;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+.project-card img {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+  height: 180px;
+  object-fit: cover;
+}
+.project-card h3 {
+  margin: 12px 0 6px 0;
+  color: #195377;
+}
+.project-card p {
+  color: #555;
+  font-size: 0.98em;
+  margin-bottom: 10px;
+}
+.project-details-btn {
+  background: #195377;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 6px 18px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.project-details-btn:hover {
+  background: #a0c9d9;
+  color: #153448;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0; width: 100vw; height: 100vh;
+  background: rgba(21,52,72,0.45);
+  justify-content: center;
+  align-items: center;
+}
+.modal-content {
+  background: #fff;
+  border-radius: 10px;
+  padding: 32px 24px 18px 24px;
+  max-width: 420px;
+  width: 90vw;
+  position: relative;
+  box-shadow: 0 4px 24px rgba(25,83,119,0.18);
+  animation: modalIn 0.3s;
+}
+@keyframes modalIn {
+  from { transform: translateY(40px) scale(0.95); opacity: 0; }
+  to { transform: none; opacity: 1; }
+}
+.close-modal {
+  position: absolute;
+  top: 10px; right: 18px;
+  font-size: 1.5em;
+  color: #195377;
+  cursor: pointer;
+}
+
+/* Testimonials Carousel */
+#testimonials {
+  text-align: center;
+}
+.testimonial-carousel {
+  position: relative;
+  min-height: 110px;
+  margin-bottom: 12px;
+}
+.testimonial {
+  display: none;
+  font-size: 1.08em;
+  color: #153448;
+  background: #f1f6fa;
+  border-radius: 8px;
+  padding: 18px 18px 10px 18px;
+  box-shadow: 0 2px 8px rgba(25,83,119,0.04);
+  margin: 0 auto;
+  max-width: 500px;
+}
+.testimonial.active {
+  display: block;
+  animation: fadeIn 0.5s;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: none; }
+}
+.testimonial-controls {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+.testimonial-controls button {
+  background: #195377;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 36px; height: 36px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.testimonial-controls button:hover {
+  background: #a0c9d9;
+  color: #153448;
+}
+
+/* Back to Top Button */
+#backToTop {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  background: #195377;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 44px; height: 44px;
+  font-size: 1.5em;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(25,83,119,0.10);
+  display: none;
+  z-index: 999;
+  transition: background 0.2s, opacity 0.2s;
+}
+#backToTop:hover {
+  background: #a0c9d9;
+  color: #153448;
+}
+
+/* Splash Screen */
+#splashScreen {
+  position: fixed;
+  z-index: 2000;
+  left: 0; top: 0; width: 100vw; height: 100vh;
+  background: #153448;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.5s;
+}
+.splash-content {
+  text-align: center;
+  color: #fff;
+  font-size: 1.2em;
+}
+.splash-text {
+  margin-top: 10px;
+  font-size: 1.1em;
+  letter-spacing: 1px;
+}
+
+/* Scroll Reveal Animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s cubic-bezier(.77,0,.18,1), transform 0.7s cubic-bezier(.77,0,.18,1);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+
 @media (max-width: 700px) {
   header img {
     width: 90px;
@@ -313,4 +498,27 @@ body.dark .contact-form button:hover {
 }
 body.dark .form-message {
   color: #a0c9d9;
+}
+
+/* --- Dark Theme Additions --- */
+body.dark .project-card, body.dark .modal-content {
+  background: #232b36;
+  color: #e0e7ef;
+}
+body.dark .project-card h3, body.dark .modal-content h3 {
+  color: #a0c9d9;
+}
+body.dark .testimonial {
+  background: #232b36;
+  color: #e0e7ef;
+}
+body.dark #splashScreen {
+  background: #232b36;
+}
+
+@media (max-width: 900px) {
+  .projects-list {
+    flex-direction: column;
+    align-items: center;
+  }
 }
