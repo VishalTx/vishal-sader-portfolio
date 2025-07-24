@@ -65,14 +65,114 @@ themeBtn.addEventListener('click', () => {
   setTheme(!document.body.classList.contains('dark'));
 });
 
-// Contact form feedback (no backend, just UI)
+// --- Project Modal Popup ---
+const projectDetails = [
+  {
+    title: 'CI/CD Automation Platform',
+    details: `<ul><li>Designed and implemented multi-stage CI/CD pipelines using Jenkins, Harness, and ArgoCD.</li><li>Automated build, test, and deployment for microservices and monoliths.</li><li>Integrated notifications and real-time monitoring.</li></ul>`
+  },
+  {
+    title: 'Cloud Infra Provisioning',
+    details: `<ul><li>Provisioned scalable AWS and Azure infrastructure using Terraform and Ansible.</li><li>Automated server configuration, security, and cost optimization.</li><li>Enabled blue/green and canary deployments.</li></ul>`
+  },
+  {
+    title: 'Kubernetes Monitoring Suite',
+    details: `<ul><li>Deployed Prometheus, Grafana, and New Relic for real-time monitoring and alerting.</li><li>Created custom dashboards and automated alerting for SRE teams.</li><li>Optimized cluster performance and resource usage.</li></ul>`
+  }
+];
+const modal = document.getElementById('projectModal');
+const modalDetails = document.getElementById('modalDetails');
+const closeModal = document.querySelector('.close-modal');
+document.querySelectorAll('.project-details-btn').forEach((btn, idx) => {
+  btn.addEventListener('click', () => {
+    modalDetails.innerHTML = `<h3>${projectDetails[idx].title}</h3>${projectDetails[idx].details}`;
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  });
+});
+closeModal.addEventListener('click', () => {
+  modal.style.display = 'none';
+  document.body.style.overflow = '';
+});
+window.addEventListener('click', (e) => {
+  if (e.target === modal) {
+    modal.style.display = 'none';
+    document.body.style.overflow = '';
+  }
+});
+
+// --- Testimonials Carousel ---
+const testimonials = document.querySelectorAll('.testimonial');
+const prevBtn = document.querySelector('.testimonial-prev');
+const nextBtn = document.querySelector('.testimonial-next');
+let testimonialIdx = 0;
+function showTestimonial(idx) {
+  testimonials.forEach((t, i) => t.classList.toggle('active', i === idx));
+}
+prevBtn.addEventListener('click', () => {
+  testimonialIdx = (testimonialIdx - 1 + testimonials.length) % testimonials.length;
+  showTestimonial(testimonialIdx);
+});
+nextBtn.addEventListener('click', () => {
+  testimonialIdx = (testimonialIdx + 1) % testimonials.length;
+  showTestimonial(testimonialIdx);
+});
+showTestimonial(testimonialIdx);
+
+// --- Back to Top Button ---
+const backToTop = document.getElementById('backToTop');
+window.addEventListener('scroll', () => {
+  backToTop.style.display = window.scrollY > 300 ? 'block' : 'none';
+});
+backToTop.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+// --- Splash Screen Loader ---
+const splash = document.getElementById('splashScreen');
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    splash.style.opacity = 0;
+    setTimeout(() => splash.style.display = 'none', 500);
+  }, 1200);
+});
+
+// --- Scroll Reveal Animation ---
+function revealOnScroll() {
+  document.querySelectorAll('.reveal').forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 60) {
+      el.classList.add('visible');
+    }
+  });
+}
+window.addEventListener('scroll', revealOnScroll);
+window.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('section, .projects-list, .testimonial-carousel').forEach(el => {
+    el.classList.add('reveal');
+  });
+  revealOnScroll();
+});
+
+// --- Enhanced Contact Form Validation ---
 const contactForm = document.getElementById('contactForm');
 const formMessage = document.getElementById('formMessage');
+contactForm.addEventListener('input', function(e) {
+  const name = contactForm.name.value.trim();
+  const email = contactForm.email.value.trim();
+  const message = contactForm.message.value.trim();
+  let valid = true;
+  if (!name) valid = false;
+  if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) valid = false;
+  if (!message) valid = false;
+  contactForm.querySelector('button[type="submit"]').disabled = !valid;
+});
 contactForm.addEventListener('submit', function(e) {
   e.preventDefault();
   formMessage.textContent = 'Sending...';
   setTimeout(() => {
     formMessage.textContent = 'Thank you for reaching out! I will get back to you soon.';
     contactForm.reset();
+    contactForm.querySelector('button[type="submit"]').disabled = true;
   }, 1200);
 }); 
