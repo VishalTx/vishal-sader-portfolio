@@ -1,87 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Vishal Sader – DevOps Engineer Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="stylesheet" href="styles.css"/>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Vishal Sader - DevOps Portfolio</title>
+<!-- Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+<!-- Stylesheet -->
+<link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
-  <header>
-    <div class="container">
-      <h1>Vishal Sader</h1>
-      <p class="subtitle">DevOps Engineer | CI/CD | Cloud & Automation</p>
-    </div>
-  </header>
-  <nav>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#awards">Awards</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-  <main>
-    <section id="about" class="container">
-      <h2>About Me</h2>
-      <p>DevOps Engineer with 3.5+ years of experience specializing in CI/CD, cloud infrastructure, and automation. Highly skilled in building robust pipelines, orchestrating cloud deployments, and developing automation solutions for modern software teams.</p>
-    </section>
+<header>
+  <div class="header-container">
+    <img src="https://cdn.iconscout.com/icon/free/png-256/avatar-373-456325.png" alt="Profile" class="profile-img"/>
+    <h1 id="name">Loading...</h1>
+    <p id="subtitle">Loading...</p>
+  </div>
+</header>
 
-    <section id="skills" class="container">
-      <h2>Technical Skills</h2>
-      <ul>
-        <li><b>Scripting:</b> Bash, Shell, Python</li>
-        <li><b>Cloud Platforms:</b> AWS, Azure, GCP</li>
-        <li><b>Dev Tools:</b> Git, Docker, VS Code, Visual Studio</li>
-        <li><b>Artifact Management:</b> Nexus, ECR, JFrog Artifactory</li>
-        <li><b>CI/CD:</b> Jenkins, Harness, ArgoCD, CircleCI, AWS Code Pipeline, Kubernetes</li>
-        <li><b>Config Management:</b> Terraform, Ansible</li>
-        <li><b>Monitoring:</b> New Relic, Prometheus, Grafana</li>
-      </ul>
-    </section>
+<nav>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#certs">Certifications</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
 
-    <section id="experience" class="container">
-      <h2>Experience</h2>
+<main>
+  <section id="about"></section>
+  <section id="skills"></section>
+  <section id="experience"></section>
+  <section id="education"></section>
+  <section id="certs"></section>
+  <section id="contact"></section>
+</main>
+
+<footer>
+  <p>&copy; 2025 Vishal Sader. All rights reserved.</p>
+</footer>
+
+<!-- JSON data embedded -->
+<script id="resumeData" type="application/json">
+{
+  "name": "Vishal Sader",
+  "subtitle": "DevOps Engineer | CI/CD | Cloud & Automation",
+  "about": "DevOps Engineer with 3.5+ years of experience specializing in CI/CD, cloud infrastructure, and automation. Highly skilled in building robust pipelines, orchestrating cloud deployments, and developing automation solutions for modern software teams.",
+  "skills": [
+    {"icon": "fas fa-terminal", "name": "Bash, Shell, Python"},
+    {"icon": "fab fa-aws", "name": "AWS, Azure, GCP"},
+    {"icon": "fas fa-cogs", "name": "Git, Docker, VS Code, Visual Studio"},
+    {"icon": "fas fa-box-open", "name": "Nexus, ECR, JFrog"},
+    {"icon": "fas fa-rocket", "name": "Jenkins, Harness, ArgoCD, CircleCI, Kubernetes"},
+    {"icon": "fas fa-tools", "name": "Terraform, Ansible"},
+    {"icon": "fas fa-chart-line", "name": "New Relic, Prometheus, Grafana"}
+  ],
+  "experience": [
+    {
+      "role": "Deluxe D3, TestingXperts Ltd",
+      "period": "May 2025 – Present",
+      "details": [
+        "Built CI/CD pipelines with Harness for data validation automation.",
+        "Automated test triggers with QuerySurge.",
+        "Managed artifacts in AWS S3, set up alerts, and synthetic data with GenRocket."
+      ]
+    },
+    {
+      "role": "Deluxe Digital Payment Portal",
+      "period": "Dec 2024 – Apr 2025",
+      "details": [
+        "Pipeline creation for Angular and .NET apps.",
+        "Deployment automation for Windows IIS."
+      ]
+    },
+    {
+      "role": "Deluxe-ImageRPS",
+      "period": "Nov 2024",
+      "details": [
+        "Automated Windows server configs using Ansible.",
+        "Streamlined web server management."
+      ]
+    }
+  ],
+  "education": [
+    "B.Tech in Computer Science, Rayat Bahra University (CGPA: 7.8/10)"
+  ],
+  "certifications": [
+    "Google Cloud badges: Compute Engine, Looker Studio, Cloud Run",
+    "Harness Star Certification"
+  ],
+  "contact": {
+    "email": "vishalsadar75@gmail.com",
+    "phone": "9697393198",
+    "linkedin": "https://linkedin.com/in/vishal-sader-134554205",
+    "location": "Chandigarh, IN"
+  }
+}
+</script>
+
+<script>
+  // Parse JSON data
+  const data = JSON.parse(document.getElementById('resumeData').textContent);
+
+  // Populate header
+  document.getElementById('name').textContent = data.name;
+  document.getElementById('subtitle').textContent = data.subtitle;
+
+  // Populate About
+  document.getElementById('about').innerHTML = `
+    <h2>About Me</h2>
+    <p>${data.about}</p>
+  `;
+
+  // Populate Skills
+  const skillsSection = document.getElementById('skills');
+  let skillsHTML = '<h2>Technical Skills</h2><ul>';
+  data.skills.forEach(skill => {
+    skillsHTML += `
+      <li><i class="${skill.icon}"></i> ${skill.name}</li>
+    `;
+  });
+  skillsHTML += '</ul>';
+  skillsSection.innerHTML = skillsHTML;
+
+  // Populate Experience
+  const experienceSection = document.getElementById('experience');
+  let expHTML = '<h2>Experience</h2>';
+  data.experience.forEach(job => {
+    expHTML += `
       <div class="job">
-        <h3>Deluxe D3, TestingXperts Ltd <span>(May 2025 – present)</span></h3>
+        <h3>${job.role} <span>(${job.period})</span></h3>
         <ul>
-          <li>Built CI/CD pipelines with Harness, automating data validation workflows.</li>
-          <li>Integrated QuerySurge, automated test triggers, and managed AWS S3 artifacts.</li>
-          <li>Implemented synthetic data solutions with GenRocket.</li>
+          ${job.details.map(d => `<li>${d}</li>`).join('')}
         </ul>
       </div>
-      <!-- Repeat similar structure for other roles -->
-    </section>
+    `;
+  });
+  experienceSection.innerHTML = expHTML;
 
-    <section id="education" class="container">
-      <h2>Education</h2>
-      <ul>
-        <li>B.Tech in Computer Science, Rayat Bahra University (CGPA: 7.8/10)</li>
-      </ul>
-    </section>
+  // Populate Education
+  const eduSection = document.getElementById('education');
+  let eduHTML = '<h2>Education</h2><ul>';
+  data.education.forEach(edu => {
+    eduHTML += `<li>${edu}</li>`;
+  });
+  eduHTML += '</ul>';
+  eduSection.innerHTML = eduHTML;
 
-    <section id="awards" class="container">
-      <h2>Certifications & Awards</h2>
-      <ul>
-        <li>Google Cloud Badges (Compute Engine, Looker Studio, Cloud Run)</li>
-        <li>Star Certification in Harness CICD</li>
-      </ul>
-    </section>
+  // Populate Certifications
+  const certsSection = document.getElementById('certs');
+  let certsHTML = '<h2>Certifications & Awards</h2><ul>';
+  data.certs.forEach(c => {
+    certsHTML += `<li>${c}</li>`;
+  });
+  certsHTML += '</ul>';
+  certsSection.innerHTML = certsHTML;
 
-    <section id="contact" class="container">
-      <h2>Contact</h2>
-      <ul>
-        <li>Email: vishalsadar75@gmail.com</li>
-        <li>Phone: 9697393198</li>
-        <li>LinkedIn: <a href="https://linkedin.com/in/vishal-sader-134554205" target="_blank">vishal-sader-134554205</a></li>
-        <li>Location: Chandigarh, IN</li>
-      </ul>
-    </section>
-  </main>
-  <footer>
-    <div class="container">© 2025 Vishal Sader</div>
-  </footer>
+  // Populate Contact
+  const contactSection = document.getElementById('contact');
+  contactSection.innerHTML = `
+    <h2>Contact</h2>
+    <ul>
+      <li><i class="fas fa-envelope"></i> <a href="mailto:${data.contact.email}">${data.contact.email}</a></li>
+      <li><i class="fas fa-phone"></i> ${data.contact.phone}</li>
+      <li><i class="fab fa-linkedin"></i> <a href="${data.contact.linkedin}" target="_blank">LinkedIn Profile</a></li>
+      <li><i class="fas fa-map-marker-alt"></i> ${data.contact.location}</li>
+    </ul>
+  `;
+</script>
 </body>
 </html>
