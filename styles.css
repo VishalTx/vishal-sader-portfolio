@@ -1,100 +1,59 @@
-/* ---------- CSS VARIABLES (light) ---------- */
-:root {
-  --bg: #f8f9fa;
-  --card: #ffffff;
-  --text: #232527;
-  --primary: #195377;
-  --accent: #0aa2c0;
-  --radius: 8px;
-  --transition: 0.3s ease;
-  --shadow: rgba(0,0,0,0.08) 0 4px 12px;
+/* ---------- DESIGN TOKENS (light) ---------- */
+:root{
+  --bg:#f8f9fa;--card:#fff;--txt:#222;--primary:#195377;
+  --accent:#0aa2c0;--radius:8px;--transition:.3s;--shadow:0 4px 12px rgba(0,0,0,.08)
 }
-
 /* ---------- DARK THEME OVERRIDE ---------- */
-body.dark {
-  --bg: #101417;
-  --card: #15202b;
-  --text: #e9ecef;
-  --primary: #4dabf7;
-  --accent: #71c2ff;
-  --shadow: rgba(0,0,0,0.4) 0 4px 12px;
+body.dark{
+  --bg:#101417;--card:#15202b;--txt:#e9ecef;--primary:#4dabf7;
+  --accent:#71c2ff;--shadow:0 4px 12px rgba(0,0,0,.45)
 }
 
-*,
-*::before,
-*::after { box-sizing:border-box; }
-
-body {
-  margin:0;
-  font-family:'Segoe UI',Arial,sans-serif;
-  background:var(--bg);
-  color:var(--text);
-  transition:background var(--transition),color var(--transition);
+/* ---------- GLOBAL ---------- */
+*,*:before,*:after{box-sizing:border-box}
+body{
+  margin:0;font-family:"Segoe UI",Arial,sans-serif;
+  background:var(--bg);color:var(--txt);
+  transition:background var(--transition),color var(--transition)
 }
+.container{width:90%;max-width:940px;margin:auto;padding-block:48px}
+h1,h2,h3{color:var(--primary)}h1{margin:.3em 0}p{line-height:1.6}
 
-/* ---------- GLOBAL ELEMENTS ---------- */
-.container {
-  width:90%;
-  max-width:940px;
-  margin-inline:auto;
-  padding-block:48px;
-}
-
-h1,h2,h3,h4 { color:var(--primary); }
-h1 { font-size:2.4rem; margin:0.4em 0; }
-h2 { font-size:1.6rem; margin-bottom:0.6em; }
-p { line-height:1.6; }
-
-nav a {
-  margin:0 12px;
-  text-decoration:none;
-  color:var(--accent);
-  font-weight:600;
-}
-nav a:hover { text-decoration:underline; }
+/* ---------- NAV ---------- */
+nav a{margin:0 12px;text-decoration:none;color:var(--accent);font-weight:600}
+nav a:hover{text-decoration:underline}
 
 /* ---------- HERO ---------- */
-.hero { text-align:center; }
-.avatar {
-  width:116px;
-  height:116px;
-  border-radius:50%;
-  box-shadow:var(--shadow);
+.hero{text-align:center}.avatar{
+  width:120px;height:120px;border-radius:50%;box-shadow:var(--shadow)
 }
 
-/* ---------- SECTION CARDS ---------- */
-section { background:var(--card); border-radius:var(--radius); box-shadow:var(--shadow); padding:32px; margin-bottom:42px; }
+/* ---------- SECTIONS ---------- */
+section{background:var(--card);border-radius:var(--radius);
+  box-shadow:var(--shadow);padding:32px;margin-bottom:42px}
 
-/* ---------- LIST STYLES ---------- */
-ul.skill-list { list-style:none; padding:0; display:flex; flex-wrap:wrap; gap:12px; }
-ul.skill-list li {
-  background:var(--primary);
-  color:#fff;
-  padding:6px 12px;
-  border-radius:var(--radius);
-  font-size:0.9rem;
-}
-
-/* ---------- EXPERIENCE TIMELINE ---------- */
-.timeline { border-left:2px solid var(--accent); padding-left:18px; }
-.timeline-item { margin-bottom:24px; position:relative; }
-.timeline-item::before {
-  content:''; position:absolute; left:-10px; top:6px;
-  width:14px; height:14px; background:var(--primary); border-radius:50%;
-}
+/* ---------- LIST / TIMELINE ---------- */
+ul.skill-list{display:flex;flex-wrap:wrap;gap:12px;list-style:none;padding:0}
+ul.skill-list li{background:var(--primary);color:#fff;padding:6px 12px;
+  border-radius:var(--radius);font-size:.9rem}
+.timeline{border-left:2px solid var(--accent);padding-left:18px}
+.timeline-item{margin-bottom:24px;position:relative}
+.timeline-item:before{content:'';position:absolute;left:-10px;top:6px;
+  width:14px;height:14px;background:var(--primary);border-radius:50%}
 
 /* ---------- FOOTER ---------- */
-footer { text-align:center; font-size:0.9rem; padding-block:24px; }
+footer{text-align:center;font-size:.9rem;padding-block:24px}
 
-/* ---------- THEME TOGGLE BUTTON ---------- */
-#themeToggle {
-  position:fixed; right:22px; bottom:22px;
-  background:var(--primary); color:#fff;
-  border:none; padding:12px; border-radius:50%;
-  box-shadow:var(--shadow); cursor:pointer; transition:background var(--transition);
+/* ---------- THEME TOGGLE ---------- */
+#themeToggle{
+  position:fixed;right:22px;bottom:22px;z-index:99;
+  background:var(--primary);color:#fff;border:none;
+  padding:12px;border-radius:50%;box-shadow:var(--shadow);cursor:pointer;
+  transition:background var(--transition)
 }
-#themeToggle:hover { background:var(--accent); }
+#themeToggle:hover{background:var(--accent)}
 
-/* ---------- REVEAL ANIMATION (Fallback) ---------- */
-.reveal { opacity:0; transform:translateY(40px); transition:opacity .6s ease, transform .6s ease; }
-.reveal.visible { opacity:1; transform:none; }
+/* ---------- REVEAL FALLBACK ---------- */
+.reveal{opacity:0;transform:translateY(40px);
+  transition:opacity .6s ease,transform .6s ease}
+.reveal.visible{opacity:1;transform:none}
