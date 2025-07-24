@@ -175,4 +175,23 @@ contactForm.addEventListener('submit', function(e) {
     contactForm.reset();
     contactForm.querySelector('button[type="submit"]').disabled = true;
   }, 1200);
+});
+
+// --- Animated Counters ---
+function animateCounter(id, end, duration) {
+  const el = document.getElementById(id);
+  let start = 0;
+  const step = Math.ceil(end / (duration / 20));
+  function update() {
+    start += step;
+    if (start > end) start = end;
+    el.textContent = start;
+    if (start < end) setTimeout(update, 20);
+  }
+  update();
+}
+window.addEventListener('DOMContentLoaded', () => {
+  animateCounter('expCounter', 4, 900); // 4+ years
+  animateCounter('projCounter', 15, 900); // 15+ projects
+  animateCounter('certCounter', 5, 900); // 5+ certifications
 }); 
