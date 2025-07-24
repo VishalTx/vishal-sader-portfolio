@@ -1,14 +1,14 @@
 {
   "profile": {
-    "summary": "DevOps Engineer with 3.5+ years of CI/CD, cloud infrastructure and automation expertise. Passionate about building resilient pipelines, orchestrating Kubernetes deployments and evangelising Infrastructure as Code practices."
+    "summary": "DevOps Engineer with 3.5+ years building CI/CD pipelines, orchestrating cloud infrastructure, and automating Kubernetes workloads."
   },
   "skills": [
-    "Bash", "Shell", "Python",
-    "AWS", "Azure", "Google Cloud Platform",
-    "Jenkins", "Harness", "ArgoCD", "CircleCI",
-    "Kubernetes", "Docker", "Terraform", "Ansible",
-    "Nexus", "ECR", "JFrog Artifactory",
-    "New Relic", "Prometheus", "Grafana"
+    "Bash","Shell","Python",
+    "AWS","Azure","GCP",
+    "Jenkins","Harness","ArgoCD","CircleCI",
+    "Kubernetes","Docker","Terraform","Ansible",
+    "Nexus","ECR","JFrog Artifactory",
+    "New Relic","Prometheus","Grafana"
   ],
   "experience": [
     {
@@ -16,9 +16,9 @@
       "company": "Deluxe D3 · TestingXperts Ltd",
       "period": "May 2025 – Present",
       "responsibilities": [
-        "Built Harness CI/CD pipelines automating data-validation workflows",
-        "Integrated QuerySurge triggers; configured real-time pass/fail Slack alerts",
-        "Managed test artifacts in AWS S3 and coordinated synthetic data via GenRocket"
+        "Built Harness pipelines that automate data-validation workflows",
+        "Integrated QuerySurge triggers and real-time Slack alerting",
+        "Managed S3 artifacts and synthetic data via GenRocket"
       ]
     },
     {
@@ -26,7 +26,7 @@
       "company": "Deluxe Digital Payment Portal · TestingXperts Ltd",
       "period": "Dec 2024 – Apr 2025",
       "responsibilities": [
-        "Created build pipelines for Angular & .NET, storing artifacts in JFrog Artifactory",
+        "Created build pipelines for Angular & .NET in JFrog Artifactory",
         "Implemented zero-downtime IIS releases through Harness CD"
       ]
     },
@@ -35,20 +35,20 @@
       "company": "ASTM · TestingXperts Ltd",
       "period": "Jan 2022 – Nov 2023",
       "responsibilities": [
-        "Containerised Flask application; deployed to AWS EKS via Jenkins + ArgoCD",
-        "Set up HPA and used New Relic for performance dashboards"
+        "Containerised Flask app; deployed to EKS via Jenkins + ArgoCD",
+        "Configured HPA & New Relic dashboards for performance insights"
       ]
     }
   ],
   "education": {
-    "degree": "B.Tech in Computer Science",
+    "degree": "B.Tech Computer Science",
     "institution": "Rayat Bahra University, Mohali",
     "period": "2018 – 2022",
     "cgpa": "7.8/10"
   },
   "awards": [
     "Harness Star-Level Certification",
-    "Google Cloud foundational badges (Compute Engine, Looker Studio, Cloud Run)"
+    "Google Cloud badges – Compute Engine, Looker Studio, Cloud Run"
   ],
   "contact": {
     "location": "Chandigarh, IN",
