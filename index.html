@@ -11,15 +11,32 @@
   <meta property="og:image" content="profile.jpg">
   <link rel="icon" type="image/png" href="profile.jpg">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div class="hero-bg"></div>
   <header>
     <button class="theme-toggle" title="Toggle light/dark mode" aria-label="Toggle theme"><i class="fas fa-moon"></i></button>
+    <div class="logo-initials">VS</div>
     <img src="profile.jpg" alt="Profile Photo">
     <h1>Vishal Sader</h1>
+    <div class="tagline">Empowering DevOps, Cloud, and Automation</div>
     <p class="typing" id="typing"></p>
+    <div class="hero-actions">
+      <a href="resume.pdf" class="resume-btn" download><i class="fas fa-download"></i> Download Resume</a>
+      <div class="hero-socials">
+        <a href="https://github.com/your-github" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/vishal-sader-134554205" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:vishalsadar75@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+    <div class="counters">
+      <div class="counter"><span id="expCounter">0</span>+ Years Experience</div>
+      <div class="counter"><span id="projCounter">0</span>+ Projects</div>
+      <div class="counter"><span id="certCounter">0</span>+ Certifications</div>
+    </div>
     <div class="contact-links">
       <span><i class="fas fa-map-marker-alt"></i> Chandigarh, IN</span>
       <a href="mailto:vishalsadar75@gmail.com"><i class="fas fa-envelope"></i> vishalsadar75@gmail.com</a>
@@ -169,14 +186,17 @@
       <h2>Testimonials</h2>
       <div class="testimonial-carousel">
         <div class="testimonial active">
+          <img class="testimonial-avatar" src="https://randomuser.me/api/portraits/men/32.jpg" alt="Team Lead">
           <p>"Vishal's automation skills streamlined our entire deployment process!"</p>
           <span>- Team Lead, TestingXperts</span>
         </div>
         <div class="testimonial">
+          <img class="testimonial-avatar" src="https://randomuser.me/api/portraits/men/45.jpg" alt="Project Manager">
           <p>"A true DevOps professional with deep cloud expertise."</p>
           <span>- Project Manager, Deluxe D3</span>
         </div>
         <div class="testimonial">
+          <img class="testimonial-avatar" src="https://randomuser.me/api/portraits/women/65.jpg" alt="Senior Engineer">
           <p>"Always delivers reliable, scalable solutions on time."</p>
           <span>- Senior Engineer, ASTM</span>
         </div>
@@ -223,5 +243,14 @@
   </div>
   <script src="script.js"></script>
   <!-- Place your profile.jpg image in the root of your repository for GitHub Pages -->
+  <footer>
+    <div class="footer-content">
+      <span>&copy; 2024 Vishal Sader. All rights reserved.</span>
+      <div class="footer-socials">
+        <a href="https://github.com/your-github" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/vishal-sader-134554205" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
