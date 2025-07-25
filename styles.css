@@ -1023,3 +1023,119 @@ body.dark .footer-socials a:hover {
   }
 }
 
+/* --- Appealing Buttons --- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 22px;
+  border-radius: 6px;
+  font-size: 1.08em;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+  margin: 0 8px 10px 0;
+  box-shadow: 0 2px 8px rgba(25,83,119,0.06);
+}
+.btn-primary {
+  background: #195377;
+  color: #fff;
+}
+.btn-primary:hover, .btn-primary:focus {
+  background: #153448;
+  color: #fff;
+}
+.btn-linkedin {
+  background: #0077b5;
+  color: #fff;
+}
+.btn-linkedin:hover, .btn-linkedin:focus {
+  background: #005983;
+  color: #fff;
+}
+.btn-github {
+  background: #232527;
+  color: #fff;
+}
+.btn-github:hover, .btn-github:focus {
+  background: #444;
+  color: #fff;
+}
+.summary-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 18px 0 10px 0;
+}
+
+/* --- Availability Badge --- */
+.availability-badge {
+  display: inline-block;
+  background: #e6f7e6;
+  color: #1a7f37;
+  border-radius: 16px;
+  padding: 6px 18px;
+  font-size: 1em;
+  font-weight: 600;
+  margin-top: 8px;
+  box-shadow: 0 2px 8px rgba(26,127,55,0.06);
+  letter-spacing: 0.5px;
+  animation: badgePulse 1.8s infinite alternate;
+}
+@keyframes badgePulse {
+  0% { box-shadow: 0 0 0 0 rgba(26,127,55,0.10); }
+  100% { box-shadow: 0 0 0 8px rgba(26,127,55,0.04); }
+}
+body.dark .availability-badge {
+  background: #1a7f37;
+  color: #e6f7e6;
+}
+
+/* --- Tech Stack Carousel --- */
+.tech-carousel {
+  display: flex;
+  overflow-x: auto;
+  gap: 18px;
+  padding: 12px 0 18px 0;
+  margin-bottom: 18px;
+  scrollbar-width: thin;
+  scrollbar-color: #a0c9d9 #e0e7ef;
+}
+.tech-carousel::-webkit-scrollbar {
+  height: 8px;
+}
+.tech-carousel::-webkit-scrollbar-thumb {
+  background: #a0c9d9;
+  border-radius: 8px;
+}
+.tech-slide {
+  flex: 0 0 auto;
+  background: #f1f6fa;
+  color: #195377;
+  border-radius: 10px;
+  padding: 12px 22px;
+  font-size: 1.1em;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 2px 8px rgba(25,83,119,0.04);
+  transition: background 0.18s, color 0.18s, transform 0.18s;
+  cursor: pointer;
+}
+.tech-slide:hover {
+  background: #a0c9d9;
+  color: #153448;
+  transform: scale(1.07);
+}
+body.dark .tech-slide {
+  background: #232b36;
+  color: #a0c9d9;
+}
+body.dark .tech-slide:hover {
+  background: #a0c9d9;
+  color: #153448;
+}
