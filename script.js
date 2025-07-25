@@ -194,4 +194,29 @@ window.addEventListener('DOMContentLoaded', () => {
   animateCounter('expCounter', 4, 900); // 4+ years
   animateCounter('projCounter', 15, 900); // 15+ projects
   animateCounter('certCounter', 5, 900); // 5+ certifications
-}); 
+});
+
+// --- Dynamic Availability Badge ---
+const availabilityBadge = document.getElementById('availabilityBadge');
+if (availabilityBadge) {
+  let available = true;
+  setInterval(() => {
+    available = !available;
+    availabilityBadge.textContent = available ? 'Available for new opportunities' : 'Currently engaged, open to offers';
+  }, 5000);
+}
+
+// --- Auto-scrolling Tech Carousel ---
+const techCarousel = document.getElementById('techCarousel');
+if (techCarousel) {
+  let scrollAmount = 0;
+  setInterval(() => {
+    if (techCarousel.scrollLeft + techCarousel.offsetWidth >= techCarousel.scrollWidth) {
+      techCarousel.scrollTo({ left: 0, behavior: 'smooth' });
+      scrollAmount = 0;
+    } else {
+      scrollAmount += 120;
+      techCarousel.scrollTo({ left: scrollAmount, behavior: 'smooth' });
+    }
+  }, 2200);
+} 
