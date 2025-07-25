@@ -1,0 +1,83 @@
+Vishal Sader
+ Software Engineer-DevOps
+ vishalsadar75@gmail.com 9697393198
+ linkedin.com/in/vishal-sader-134554205
+ Profile Summary
+ Chandigarh, IN
+ DevOps Engineer with 3.5+ years of experience in CI/CD, cloud infrastructure, and automation.Skilled in tools 
+like Harness, Jenkins, ArgoCD, Terraform, Ansible, and Docker. Experienced with AWS, Azure, and GCP, 
+including Kubernetes deployments and IaC.Proficient in Bash, Shell, and Python scripting for automation and 
+system tasks.Strong background in artifact management, server configuration, and performance monitoring.
+ SKILLS
+ Scripting
+ Bash, Shell, Python
+ Developer Tools
+ AWS, Azure, Git, Docker, Google Cloud Platform, VS 
+Code, Visual Studio
+ Artifactory Tools
+ Nexus Repository Manager, Elastic Container 
+Registry, Jfrog Artifactory
+ Professional Experience
+ CI/CD
+ Jenkins, Kubernetes, Hanress CI/CD, ArgoCD, 
+CircleCI, AWS Code Pipeline
+ Configuration Tools
+ Terraform, Ansible
+ Monitoring Tool
+ New Relic, Prometheus Grafana
+ Deluxe D3(Deluxe Digital Data), TestingXperts Pvt. Ltd, Chandigarh
+ Built CI/CD pipelines using Harness, automating data validation workflows.
+ •
+ •
+ Integrated QuerySurge via Harness Delegate to trigger test cases to Accelerate 
+the Testing Process.
+ Configured real-time pass/fail alerts for test execution results.
+ •
+ •
+ Implemented GenRocket and Co-ordinated with data team for synthetic test 
+data generation.
+ Managed test artifacts and data using AWS S3 buckets.
+ •
+ •
+ Deluxe-Digital Payment Portal, TestingXperts Pvt. Ltd, Chandigarh
+ Created and Executed build pipelines for Angular and .NET applications, storing 
+artifacts in JFrog Artifactory.
+ •
+ Developed continuous deployment (CD) pipelines for IIS-based deployment 
+Implement on Windows servers.
+ Deluxe-ImageRPS, TestingXperts Pvt. Ltd, Chandigarh
+ •
+ Automated Windows server configuration and deployment with Ansible from a 
+Linux server, creating and managing efficient playbooks and roles.
+ •
+ Set-up and Launched web servers on Windows using Ansible and streamlined 
+configuration management processes.
+ 05/2025 – present
+ 12/2024 – 04/2025
+ 11/2024
+12/2023 – 02/2024
+ •
+ IACT, TestingXperts Pvt. Ltd, Chandigarh
+ Leveraged Terraform to provision AWS and Azure resources and ensured script 
+accuracy by testing and verifying team members' code.
+ •
+ Developed comprehensive documentation for services and conducted demos 
+and presentations for project implementations.
+ •
+ ASTM, TestingXperts Pvt. Ltd, Chandigarh
+ Deployed a Python Flask application on Kubernetes using Jenkins and ArgoCD, 
+and optimized performance with autoscaling.
+ •
+ Containerized applications with Docker, managed EKS clusters for deployment, 
+and utilized New Relic for application monitoring and performance insights.
+ EDUCATION
+ 01/2022 – 11/2023
+ Bachelor of Technology in Computer science, Rayat Bahra University, Mohali
+ CGPA: 7.8/10
+ LEADERSHIP & AWARDS
+ 08/2018 – 07/2022
+ Chandigarh, IN
+ Google Cloud Badges And Certifications
+ Learned and hands on basics of GCP cloud like Compute Engine, Looker Studio, Cloud Run
+ Harness Certificate
+ Certified Star level in Harness CICD
