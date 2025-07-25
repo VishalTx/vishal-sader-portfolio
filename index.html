@@ -16,229 +16,138 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="hero-bg"></div>
-  <header>
-    <button class="theme-toggle" title="Toggle light/dark mode" aria-label="Toggle theme"><i class="fas fa-moon"></i></button>
-    <div class="logo-initials">VS</div>
-    <img src="profile.jpg" alt="Profile Photo">
-    <h1>Vishal Sader</h1>
-    <div class="tagline">Empowering DevOps, Cloud, and Automation</div>
-    <p class="typing" id="typing"></p>
-    <div class="hero-actions">
-      <a href="resume.pdf" class="resume-btn" download><i class="fas fa-download"></i> Download Resume</a>
-      <div class="hero-socials">
-        <a href="https://github.com/your-github" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-        <a href="https://linkedin.com/in/vishal-sader-134554205" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-        <a href="mailto:vishalsadar75@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+  <div class="resume-header">
+    <div class="resume-main">
+      <div class="resume-name-title">
+        <h1>Vishal Sader</h1>
+        <h2 class="resume-title">DevOps Engineer</h2>
+      </div>
+      <div class="resume-contact">
+        <span><i class="fas fa-map-marker-alt"></i> Chandigarh, IN</span>
+        <span><i class="fas fa-envelope"></i> vishalsadar75@gmail.com</span>
+        <span><i class="fas fa-phone"></i> 9697393198</span>
+        <a href="https://linkedin.com/in/vishal-sader-134554205" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="https://github.com/your-github" target="_blank"><i class="fab fa-github"></i> GitHub</a>
       </div>
     </div>
-    <div class="counters">
-      <div class="counter"><span id="expCounter">0</span>+ Years Experience</div>
-      <div class="counter"><span id="projCounter">0</span>+ Projects</div>
-      <div class="counter"><span id="certCounter">0</span>+ Certifications</div>
-    </div>
-    <div class="contact-links">
-      <span><i class="fas fa-map-marker-alt"></i> Chandigarh, IN</span>
-      <a href="mailto:vishalsadar75@gmail.com"><i class="fas fa-envelope"></i> vishalsadar75@gmail.com</a>
-      <span><i class="fas fa-phone"></i> 9697393198</span>
-      <a href="https://linkedin.com/in/vishal-sader-134554205" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-    </div>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#experience">Experience</a>
-      <a href="#projects">Projects</a>
-      <a href="#testimonials">Testimonials</a>
-      <a href="#education">Education</a>
-      <a href="#certifications">Awards</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <div class="scroll-down-indicator"><i class="fas fa-angle-down"></i></div>
-  </header>
-  <div class="container">
-    <section id="featured-tech">
-      <h2>Featured Technologies</h2>
-      <div class="tech-icons">
-        <i class="fab fa-aws" title="AWS"></i>
-        <i class="fab fa-docker" title="Docker"></i>
-        <i class="fab fa-git-alt" title="Git"></i>
-        <i class="fab fa-microsoft" title="Azure"></i>
-        <i class="fab fa-google" title="Google Cloud"></i>
-        <i class="fas fa-cogs" title="Jenkins"></i>
-        <i class="fas fa-tools" title="Terraform"></i>
-        <i class="fas fa-code" title="Python"></i>
-      </div>
-    </section>
-    <div class="section-divider"></div>
-    <section id="about">
-      <h2>Profile Summary</h2>
+    <a href="resume.pdf" class="resume-btn" download><i class="fas fa-download"></i> Download Resume</a>
+  </div>
+  <div class="container resume-container">
+    <section id="summary">
+      <h2>Professional Summary</h2>
       <p>
-        DevOps Engineer with 3.5+ years of experience in CI/CD, cloud infrastructure, and automation. Skilled in tools like Harness, Jenkins, ArgoCD, Terraform, Ansible, and Docker. Experienced with AWS, Azure, and GCP, including Kubernetes deployments and IaC. Proficient in Bash, Shell, and Python scripting for automation and system tasks. Strong background in artifact management, server configuration, and performance monitoring.
+        DevOps Engineer with 3.5+ years of experience in CI/CD, cloud infrastructure, and automation. Skilled in Harness, Jenkins, ArgoCD, Terraform, Ansible, Docker, AWS, Azure, GCP, and Kubernetes. Proficient in Bash, Shell, and Python scripting. Strong background in artifact management, server configuration, and performance monitoring.
       </p>
-    </section>
-    <div class="section-divider"></div>
-    <section id="fun-facts">
-      <h2>Fun Facts</h2>
-      <ul class="fun-facts-list">
-        <li><i class="fas fa-mountain"></i> Loves hiking and exploring new places.</li>
-        <li><i class="fas fa-music"></i> Plays guitar in free time.</li>
-        <li><i class="fas fa-coffee"></i> Runs on coffee and code.</li>
-        <li><i class="fas fa-rocket"></i> Passionate about automation and new tech.</li>
-      </ul>
     </section>
     <div class="section-divider"></div>
     <section id="skills">
       <h2>Skills</h2>
-      <ul class="skills-list">
-        <li><i class="fas fa-terminal"></i> Bash, Shell, Python
-          <div class="skill-bar"><div class="skill-bar-inner" data-skill="90"></div></div>
-        </li>
-        <li><i class="fab fa-aws"></i> AWS
-          <div class="skill-bar"><div class="skill-bar-inner" data-skill="85"></div></div>
-        </li>
-        <li><i class="fab fa-microsoft"></i> Azure
-          <div class="skill-bar"><div class="skill-bar-inner" data-skill="80"></div></div>
-        </li>
-        <li><i class="fab fa-git-alt"></i> Git
-          <div class="skill-bar"><div class="skill-bar-inner" data-skill="90"></div></div>
-        </li>
-        <li><i class="fab fa-docker"></i> Docker
-          <div class="skill-bar"><div class="skill-bar-inner" data-skill="85"></div></div>
-        </li>
-        <li><i class="fab fa-google"></i> Google Cloud Platform
-          <div class="skill-bar"><div class="skill-bar-inner" data-skill="75"></div></div>
-        </li>
-        <li><i class="fas fa-code"></i> VS Code, Visual Studio
-          <div class="skill-bar"><div class="skill-bar-inner" data-skill="80"></div></div>
-        </li>
-        <li><i class="fas fa-archive"></i> Nexus, ECR, JFrog Artifactory
-          <div class="skill-bar"><div class="skill-bar-inner" data-skill="80"></div></div>
-        </li>
-        <li><i class="fas fa-cogs"></i> Jenkins, Kubernetes, Harness, ArgoCD, CircleCI, AWS CodePipeline
-          <div class="skill-bar"><div class="skill-bar-inner" data-skill="85"></div></div>
-        </li>
-        <li><i class="fas fa-tools"></i> Terraform, Ansible
-          <div class="skill-bar"><div class="skill-bar-inner" data-skill="80"></div></div>
-        </li>
-        <li><i class="fas fa-chart-line"></i> New Relic, Prometheus, Grafana
-          <div class="skill-bar"><div class="skill-bar-inner" data-skill="75"></div></div>
-        </li>
-      </ul>
+      <div class="skills-matrix">
+        <div>
+          <h3>Cloud</h3>
+          <ul><li>AWS</li><li>Azure</li><li>GCP</li></ul>
+        </div>
+        <div>
+          <h3>CI/CD</h3>
+          <ul><li>Jenkins</li><li>Harness</li><li>ArgoCD</li><li>CircleCI</li><li>AWS CodePipeline</li></ul>
+        </div>
+        <div>
+          <h3>Containers & Orchestration</h3>
+          <ul><li>Docker</li><li>Kubernetes</li></ul>
+        </div>
+        <div>
+          <h3>IaC & Automation</h3>
+          <ul><li>Terraform</li><li>Ansible</li></ul>
+        </div>
+        <div>
+          <h3>Monitoring</h3>
+          <ul><li>New Relic</li><li>Prometheus</li><li>Grafana</li></ul>
+        </div>
+        <div>
+          <h3>Scripting</h3>
+          <ul><li>Bash</li><li>Shell</li><li>Python</li></ul>
+        </div>
+        <div>
+          <h3>Artifact Management</h3>
+          <ul><li>Nexus</li><li>ECR</li><li>JFrog Artifactory</li></ul>
+        </div>
+        <div>
+          <h3>Version Control</h3>
+          <ul><li>Git</li></ul>
+        </div>
+      </div>
     </section>
     <div class="section-divider"></div>
     <section id="experience">
       <h2>Professional Experience</h2>
-      <ul class="experience-list">
-        <li class="experience-item">
-          <span class="role">Deluxe D3 (Deluxe Digital Data), TestingXperts Pvt. Ltd, Chandigarh</span>
-          <span class="date">05/2025 – present</span>
-          <button class="exp-toggle" aria-label="Toggle details">Show Details</button>
-          <ul>
-            <li>Built CI/CD pipelines using Harness, automating data validation workflows.</li>
-            <li>Integrated QuerySurge via Harness Delegate to trigger test cases to accelerate the testing process.</li>
-            <li>Configured real-time pass/fail alerts for test execution results.</li>
-            <li>Implemented GenRocket and coordinated with data team for synthetic test data generation.</li>
-            <li>Managed test artifacts and data using AWS S3 buckets.</li>
-          </ul>
-        </li>
-        <li class="experience-item">
-          <span class="role">Deluxe-Digital Payment Portal, TestingXperts Pvt. Ltd, Chandigarh</span>
-          <span class="date">12/2024 – 04/2025</span>
-          <button class="exp-toggle" aria-label="Toggle details">Show Details</button>
-          <ul>
-            <li>Created and executed build pipelines for Angular and .NET applications, storing artifacts in JFrog Artifactory.</li>
-            <li>Developed continuous deployment (CD) pipelines for IIS-based deployment on Windows servers.</li>
-          </ul>
-        </li>
-        <li class="experience-item">
-          <span class="role">Deluxe-ImageRPS, TestingXperts Pvt. Ltd, Chandigarh</span>
-          <span class="date">11/2024</span>
-          <button class="exp-toggle" aria-label="Toggle details">Show Details</button>
-          <ul>
-            <li>Automated Windows server configuration and deployment with Ansible from a Linux server, creating and managing efficient playbooks and roles.</li>
-            <li>Set-up and launched web servers on Windows using Ansible and streamlined configuration management processes.</li>
-          </ul>
-        </li>
-        <li class="experience-item">
-          <span class="role">IACT, TestingXperts Pvt. Ltd, Chandigarh</span>
-          <span class="date">12/2023 – 02/2024</span>
-          <button class="exp-toggle" aria-label="Toggle details">Show Details</button>
-          <ul>
-            <li>Leveraged Terraform to provision AWS and Azure resources and ensured script accuracy by testing and verifying team members' code.</li>
-            <li>Developed comprehensive documentation for services and conducted demos and presentations for project implementations.</li>
-          </ul>
-        </li>
-        <li class="experience-item">
-          <span class="role">ASTM, TestingXperts Pvt. Ltd, Chandigarh</span>
-          <span class="date">01/2022 – 11/2023</span>
-          <button class="exp-toggle" aria-label="Toggle details">Show Details</button>
-          <ul>
-            <li>Deployed a Python Flask application on Kubernetes using Jenkins and ArgoCD, and optimized performance with autoscaling.</li>
-            <li>Containerized applications with Docker, managed EKS clusters for deployment, and utilized New Relic for application monitoring and performance insights.</li>
-          </ul>
-        </li>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-date">05/2025 – present</div>
+          <div class="timeline-content">
+            <div class="timeline-role">Deluxe D3 (Deluxe Digital Data), TestingXperts Pvt. Ltd, Chandigarh</div>
+            <ul>
+              <li>Built CI/CD pipelines using Harness, automating data validation workflows.</li>
+              <li>Integrated QuerySurge via Harness Delegate to trigger test cases to accelerate the testing process.</li>
+              <li>Configured real-time pass/fail alerts for test execution results.</li>
+              <li>Implemented GenRocket and coordinated with data team for synthetic test data generation.</li>
+              <li>Managed test artifacts and data using AWS S3 buckets.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-date">12/2024 – 04/2025</div>
+          <div class="timeline-content">
+            <div class="timeline-role">Deluxe-Digital Payment Portal, TestingXperts Pvt. Ltd, Chandigarh</div>
+            <ul>
+              <li>Created and executed build pipelines for Angular and .NET applications, storing artifacts in JFrog Artifactory.</li>
+              <li>Developed continuous deployment (CD) pipelines for IIS-based deployment on Windows servers.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-date">11/2024</div>
+          <div class="timeline-content">
+            <div class="timeline-role">Deluxe-ImageRPS, TestingXperts Pvt. Ltd, Chandigarh</div>
+            <ul>
+              <li>Automated Windows server configuration and deployment with Ansible from a Linux server, creating and managing efficient playbooks and roles.</li>
+              <li>Set-up and launched web servers on Windows using Ansible and streamlined configuration management processes.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-date">12/2023 – 02/2024</div>
+          <div class="timeline-content">
+            <div class="timeline-role">IACT, TestingXperts Pvt. Ltd, Chandigarh</div>
+            <ul>
+              <li>Leveraged Terraform to provision AWS and Azure resources and ensured script accuracy by testing and verifying team members' code.</li>
+              <li>Developed comprehensive documentation for services and conducted demos and presentations for project implementations.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-date">01/2022 – 11/2023</div>
+          <div class="timeline-content">
+            <div class="timeline-role">ASTM, TestingXperts Pvt. Ltd, Chandigarh</div>
+            <ul>
+              <li>Deployed a Python Flask application on Kubernetes using Jenkins and ArgoCD, and optimized performance with autoscaling.</li>
+              <li>Containerized applications with Docker, managed EKS clusters for deployment, and utilized New Relic for application monitoring and performance insights.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="section-divider"></div>
+    <section id="certifications">
+      <h2>Certifications</h2>
+      <ul class="cert-list resume-cert-list">
+        <li><strong>Google Cloud Badges And Certifications:</strong> Basics of GCP cloud, Compute Engine, Looker Studio, Cloud Run</li>
+        <li><strong>Harness Certificate:</strong> Certified Star level in Harness CICD</li>
       </ul>
-    </section>
-    <div class="section-divider"></div>
-    <section id="projects">
-      <h2>Projects</h2>
-      <div class="projects-list">
-        <div class="project-card" data-project="1">
-          <img src="https://placehold.co/300x180?text=Project+1" alt="Project 1">
-          <h3>CI/CD Automation Platform</h3>
-          <p>Automated build, test, and deploy pipelines using Jenkins, Harness, and ArgoCD.</p>
-          <button class="project-details-btn">View Details</button>
-        </div>
-        <div class="project-card" data-project="2">
-          <img src="https://placehold.co/300x180?text=Project+2" alt="Project 2">
-          <h3>Cloud Infra Provisioning</h3>
-          <p>Provisioned scalable AWS/Azure infrastructure with Terraform and Ansible.</p>
-          <button class="project-details-btn">View Details</button>
-        </div>
-        <div class="project-card" data-project="3">
-          <img src="https://placehold.co/300x180?text=Project+3" alt="Project 3">
-          <h3>Kubernetes Monitoring Suite</h3>
-          <p>Deployed Prometheus, Grafana, and New Relic for real-time monitoring.</p>
-          <button class="project-details-btn">View Details</button>
-        </div>
-      </div>
-      <!-- Modal for project details -->
-      <div class="modal" id="projectModal">
-        <div class="modal-content">
-          <span class="close-modal">&times;</span>
-          <div id="modalDetails"></div>
-        </div>
-      </div>
-    </section>
-    <div class="section-divider"></div>
-    <section id="testimonials">
-      <h2>Testimonials</h2>
-      <div class="testimonial-carousel">
-        <div class="testimonial active">
-          <img class="testimonial-avatar" src="https://randomuser.me/api/portraits/men/32.jpg" alt="Team Lead">
-          <p>"Vishal's automation skills streamlined our entire deployment process!"</p>
-          <span>- Team Lead, TestingXperts</span>
-        </div>
-        <div class="testimonial">
-          <img class="testimonial-avatar" src="https://randomuser.me/api/portraits/men/45.jpg" alt="Project Manager">
-          <p>"A true DevOps professional with deep cloud expertise."</p>
-          <span>- Project Manager, Deluxe D3</span>
-        </div>
-        <div class="testimonial">
-          <img class="testimonial-avatar" src="https://randomuser.me/api/portraits/women/65.jpg" alt="Senior Engineer">
-          <p>"Always delivers reliable, scalable solutions on time."</p>
-          <span>- Senior Engineer, ASTM</span>
-        </div>
-      </div>
-      <div class="testimonial-controls">
-        <button class="testimonial-prev">&#8592;</button>
-        <button class="testimonial-next">&#8594;</button>
-      </div>
     </section>
     <div class="section-divider"></div>
     <section id="education">
       <h2>Education</h2>
-      <ul class="education-list">
+      <ul class="education-list resume-edu-list">
         <li>
           <strong>Bachelor of Technology in Computer Science</strong>, Rayat Bahra University, Mohali<br>
           CGPA: 7.8/10<br>
@@ -246,35 +155,7 @@
         </li>
       </ul>
     </section>
-    <div class="section-divider"></div>
-    <section id="certifications">
-      <h2>Leadership & Awards</h2>
-      <ul class="cert-list">
-        <li><strong>Google Cloud Badges And Certifications:</strong> Learned and hands on basics of GCP cloud like Compute Engine, Looker Studio, Cloud Run</li>
-        <li><strong>Harness Certificate:</strong> Certified Star level in Harness CICD</li>
-      </ul>
-    </section>
-    <div class="section-divider"></div>
-    <section id="contact">
-      <h2>Contact</h2>
-      <form class="contact-form" id="contactForm" autocomplete="off" novalidate>
-        <input type="text" id="name" name="name" placeholder="Your Name" required>
-        <input type="email" id="email" name="email" placeholder="Your Email" required>
-        <textarea id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-        <div class="form-message" id="formMessage"></div>
-      </form>
-    </section>
   </div>
-  <button id="backToTop" title="Back to top">&#8679;</button>
-  <div id="splashScreen">
-    <div class="splash-content">
-      <img src="profile.jpg" alt="Loading..." style="width:60px;height:60px;border-radius:50%;margin-bottom:10px;">
-      <div class="splash-text">Loading Portfolio...</div>
-    </div>
-  </div>
-  <script src="script.js"></script>
-  <!-- Place your profile.jpg image in the root of your repository for GitHub Pages -->
   <footer>
     <div class="footer-content">
       <span>&copy; 2024 Vishal Sader. All rights reserved.</span>
