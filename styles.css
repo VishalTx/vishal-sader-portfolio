@@ -1139,3 +1139,130 @@ body.dark .tech-slide:hover {
   background: #a0c9d9;
   color: #153448;
 }
+
+/* --- Enhanced Skills Grid --- */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 28px;
+  margin: 24px 0 18px 0;
+}
+.skill-category {
+  background: #f8f9fa;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(25,83,119,0.04);
+  padding: 18px 16px 12px 16px;
+  min-width: 180px;
+}
+.skill-category h3 {
+  font-size: 1.08em;
+  color: #195377;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.skill-category ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.skill-category li {
+  margin-bottom: 8px;
+  font-size: 1em;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.badge {
+  display: inline-block;
+  font-size: 0.92em;
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 2px 10px;
+  margin-left: 6px;
+  background: #e0e7ef;
+  color: #195377;
+  letter-spacing: 0.2px;
+}
+.badge.expert {
+  background: #1a7f37;
+  color: #fff;
+}
+.badge.advanced {
+  background: #195377;
+  color: #fff;
+}
+.badge.proficient {
+  background: #a0c9d9;
+  color: #153448;
+}
+
+.cert-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin: 18px 0 0 0;
+  align-items: center;
+}
+.cert-badge {
+  background: #fffbe6;
+  color: #b38f00;
+  border-radius: 16px;
+  padding: 6px 18px;
+  font-size: 1em;
+  font-weight: 700;
+  box-shadow: 0 2px 8px rgba(179,143,0,0.06);
+  letter-spacing: 0.5px;
+  border: 1.5px solid #ffe066;
+  display: inline-block;
+}
+.cert-badge.aws {
+  background: #f0f7ff;
+  color: #195377;
+  border-color: #a0c9d9;
+}
+.cert-badge.gcp {
+  background: #f0fff7;
+  color: #1a7f37;
+  border-color: #a0c9d9;
+}
+.cert-badge.harness {
+  background: #f7f0ff;
+  color: #7c3aed;
+  border-color: #a0c9d9;
+}
+body.dark .skill-category {
+  background: #232b36;
+}
+body.dark .badge {
+  background: #232b36;
+  color: #a0c9d9;
+}
+body.dark .badge.expert {
+  background: #1a7f37;
+  color: #fff;
+}
+body.dark .badge.advanced {
+  background: #195377;
+  color: #fff;
+}
+body.dark .badge.proficient {
+  background: #a0c9d9;
+  color: #153448;
+}
+body.dark .cert-badge {
+  background: #232b36;
+  color: #a0c9d9;
+  border-color: #195377;
+}
+@media (max-width: 700px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .cert-badges {
+    gap: 8px;
+    font-size: 0.98em;
+  }
+}
