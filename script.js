@@ -219,4 +219,44 @@ if (techCarousel) {
       techCarousel.scrollTo({ left: scrollAmount, behavior: 'smooth' });
     }
   }, 2200);
+}
+
+// --- AskMe Chatbot Widget Logic ---
+const askmeToggle = document.getElementById('askme-toggle');
+const askmeWindow = document.getElementById('askme-window');
+const askmeClose = document.getElementById('askme-close');
+const askmeForm = document.getElementById('askme-form');
+const askmeInput = document.getElementById('askme-input');
+const askmeMessages = document.getElementById('askme-messages');
+
+if (askmeToggle && askmeWindow && askmeClose && askmeForm && askmeInput && askmeMessages) {
+  askmeToggle.addEventListener('click', () => {
+    askmeWindow.style.display = 'flex';
+    askmeToggle.style.display = 'none';
+    askmeInput.focus();
+  });
+  askmeClose.addEventListener('click', () => {
+    askmeWindow.style.display = 'none';
+    askmeToggle.style.display = 'flex';
+  });
+  askmeForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const userMsg = askmeInput.value.trim();
+    if (!userMsg) return;
+    // Add user message
+    const userDiv = document.createElement('div');
+    userDiv.className = 'askme-user-msg';
+    userDiv.textContent = userMsg;
+    askmeMessages.appendChild(userDiv);
+    askmeMessages.scrollTop = askmeMessages.scrollHeight;
+    askmeInput.value = '';
+    // Bot response (demo: echo)
+    setTimeout(() => {
+      const botDiv = document.createElement('div');
+      botDiv.className = 'askme-bot-msg';
+      botDiv.textContent = `You asked: "${userMsg}". I'm here to help! (This is a demo.)`;
+      askmeMessages.appendChild(botDiv);
+      askmeMessages.scrollTop = askmeMessages.scrollHeight;
+    }, 700);
+  });
 } 
