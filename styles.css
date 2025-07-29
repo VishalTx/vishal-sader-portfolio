@@ -1311,3 +1311,173 @@ body.dark .cert-badge {
     font-size: 0.98em;
   }
 }
+
+/* --- AskMe Chatbot Widget --- */
+#askme-chatbot {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  z-index: 2000;
+  font-family: 'Montserrat', 'Roboto', sans-serif;
+}
+#askme-toggle {
+  background: #195377;
+  color: #fff;
+  border: none;
+  border-radius: 24px;
+  padding: 12px 22px;
+  font-size: 1.1em;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(25,83,119,0.10);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.2s;
+}
+#askme-toggle:hover {
+  background: #a0c9d9;
+  color: #153448;
+}
+#askme-window {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  bottom: 60px;
+  right: 0;
+  width: 320px;
+  max-width: 90vw;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(25,83,119,0.18);
+  overflow: hidden;
+  animation: askmeIn 0.25s;
+}
+@keyframes askmeIn {
+  from { opacity: 0; transform: translateY(40px) scale(0.95); }
+  to { opacity: 1; transform: none; }
+}
+#askme-header {
+  background: #195377;
+  color: #fff;
+  font-weight: 700;
+  padding: 12px 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.08em;
+}
+#askme-close {
+  cursor: pointer;
+  font-size: 1.3em;
+  color: #fff;
+  margin-left: 12px;
+  transition: color 0.2s;
+}
+#askme-close:hover {
+  color: #a0c9d9;
+}
+#askme-messages {
+  background: #f8f9fa;
+  min-height: 80px;
+  max-height: 220px;
+  overflow-y: auto;
+  padding: 14px 12px 8px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 1em;
+}
+.askme-bot-msg {
+  background: #e0e7ef;
+  color: #195377;
+  border-radius: 12px 12px 12px 4px;
+  padding: 8px 14px;
+  align-self: flex-start;
+  max-width: 85%;
+  box-shadow: 0 2px 8px rgba(25,83,119,0.04);
+}
+.askme-user-msg {
+  background: #195377;
+  color: #fff;
+  border-radius: 12px 12px 4px 12px;
+  padding: 8px 14px;
+  align-self: flex-end;
+  max-width: 85%;
+  box-shadow: 0 2px 8px rgba(25,83,119,0.10);
+}
+#askme-form {
+  display: flex;
+  border-top: 1px solid #e0e7ef;
+  background: #fff;
+}
+#askme-input {
+  flex: 1;
+  border: none;
+  padding: 12px;
+  font-size: 1em;
+  border-radius: 0 0 0 16px;
+  outline: none;
+  background: #f8f9fa;
+}
+#askme-form button {
+  background: #195377;
+  color: #fff;
+  border: none;
+  border-radius: 0 0 16px 0;
+  padding: 0 18px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+#askme-form button:hover {
+  background: #a0c9d9;
+  color: #153448;
+}
+@media (max-width: 700px) {
+  #askme-chatbot {
+    bottom: 12px;
+    right: 8px;
+  }
+  #askme-window {
+    width: 98vw;
+    min-width: 0;
+    right: -8px;
+    bottom: 50px;
+  }
+}
+body.dark #askme-window {
+  background: #232b36;
+  color: #e0e7ef;
+}
+body.dark #askme-header {
+  background: #232b36;
+  color: #a0c9d9;
+}
+body.dark #askme-messages {
+  background: #181c22;
+}
+body.dark .askme-bot-msg {
+  background: #232b36;
+  color: #a0c9d9;
+}
+body.dark .askme-user-msg {
+  background: #a0c9d9;
+  color: #153448;
+}
+body.dark #askme-form {
+  background: #232b36;
+  border-top: 1px solid #195377;
+}
+body.dark #askme-input {
+  background: #232b36;
+  color: #e0e7ef;
+}
+body.dark #askme-form button {
+  background: #a0c9d9;
+  color: #153448;
+}
+body.dark #askme-form button:hover {
+  background: #195377;
+  color: #fff;
+}
